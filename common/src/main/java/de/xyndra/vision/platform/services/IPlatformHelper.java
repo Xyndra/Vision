@@ -1,4 +1,4 @@
-package com.example.examplemod.platform.services;
+package de.xyndra.vision.platform.services;
 
 public interface IPlatformHelper {
 

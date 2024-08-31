@@ -1,6 +1,6 @@
-package com.example.examplemod.platform;
+package de.xyndra.vision.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import de.xyndra.vision.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatformHelper implements IPlatformHelper {

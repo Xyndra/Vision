@@ -1,7 +1,7 @@
-package com.example.examplemod.platform;
+package de.xyndra.vision.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import de.xyndra.vision.Constants;
+import de.xyndra.vision.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

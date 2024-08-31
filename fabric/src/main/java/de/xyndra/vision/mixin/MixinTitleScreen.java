@@ -1,6 +1,6 @@
-package com.example.examplemod.mixin;
+package de.xyndra.vision.mixin;
 
-import com.example.examplemod.Constants;
+import de.xyndra.vision.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,8 +1,8 @@
-package com.example.examplemod;
+package de.xyndra.vision;
 
 import net.fabricmc.api.ModInitializer;
 
-public class ExampleMod implements ModInitializer {
+public class VisionMod implements ModInitializer {
     
     @Override
     public void onInitialize() {
