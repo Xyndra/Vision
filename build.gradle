@@ -3,15 +3,20 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)' apply(false)
     id 'org.spongepowered.gradle.vanilla' version '0.2.1-SNAPSHOT' apply(false)
     id("org.spongepowered.mixin") version "0.7-SNAPSHOT" apply(false)
+    id 'org.jetbrains.kotlin.jvm' version '2.0.20' apply(false)
 }
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'kotlin'
+
+    kotlin {
+        jvmToolchain(17)
+    }
 
     java.toolchain.languageVersion = JavaLanguageVersion.of(17)
     java.withSourcesJar()
-    java.withJavadocJar()
-        
+
     jar {
         from(rootProject.file("LICENSE")) {
             rename { "${it}_${mod_name}" }

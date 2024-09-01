@@ -1,11 +1,11 @@
-package de.xyndra.vision;
+package de.xyndra.vision
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
-public class Constants {
-
-	public static final String MOD_ID = "vision";
-	public static final String MOD_NAME = "Vision";
-	public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
+object Constants {
+    const val MOD_ID: String = "vision"
+    const val MOD_NAME: String = "Vision"
+    @JvmField
+    val LOG: Logger = LoggerFactory.getLogger(MOD_NAME)
 }

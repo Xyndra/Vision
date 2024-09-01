@@ -19,7 +19,9 @@ plugins {
     id 'java'
     id 'maven-publish'
     id 'org.spongepowered.gradle.vanilla'
+    id 'org.jetbrains.kotlin.jvm'
 }
+
 base {
     archivesName = "${mod_name}-common-${minecraft_version}"
 }
@@ -27,6 +29,23 @@ minecraft {
     version(minecraft_version)
     if(file("src/main/resources/${mod_id}.accesswidener").exists()){
         accessWideners(file("src/main/resources/${mod_id}.accesswidener"))
+    }
+}
+
+tasks.named("sourcesJar", Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from(sourceSets.main.allSource)
+    from(sourceSets.main.kotlin)
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        kotlin {
+            srcDir 'src/main/kotlin'
+        }
     }
 }
 

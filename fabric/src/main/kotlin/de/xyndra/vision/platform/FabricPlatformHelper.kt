@@ -1,24 +1,14 @@
-package de.xyndra.vision.platform;
+package de.xyndra.vision.platform
 
-import de.xyndra.vision.platform.services.IPlatformHelper;
-import net.fabricmc.loader.api.FabricLoader;
+import de.xyndra.vision.platform.services.IPlatformHelper
+import net.fabricmc.loader.api.FabricLoader
 
-public class FabricPlatformHelper implements IPlatformHelper {
+class FabricPlatformHelper : IPlatformHelper {
+    override val platformName: String = "Fabric"
 
-    @Override
-    public String getPlatformName() {
-        return "Fabric";
+    override fun isModLoaded(modId: String): Boolean {
+        return FabricLoader.getInstance().isModLoaded(modId)
     }
 
-    @Override
-    public boolean isModLoaded(String modId) {
-
-        return FabricLoader.getInstance().isModLoaded(modId);
-    }
-
-    @Override
-    public boolean isDevelopmentEnvironment() {
-
-        return FabricLoader.getInstance().isDevelopmentEnvironment();
-    }
+    override val isDevelopmentEnvironment: Boolean = FabricLoader.getInstance().isDevelopmentEnvironment
 }
